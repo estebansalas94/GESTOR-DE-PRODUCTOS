@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Datatable from './components/Datatable';
+
 
 function App() {
   return (
-    <div>
-        Gestor de productos
-        <button className='btn btn-primary'>Boton</button>
 
-    </div>
+    <>
+          <Datatable/>
+    </>
   )
 }
 
