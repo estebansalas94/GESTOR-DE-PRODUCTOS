@@ -19,7 +19,7 @@ use App\Http\Controllers\Api\ProductoController;
 */
 Route::prefix('v1')->group(function(){
     Route::get('/public/{id}',[FrontController::class,'producto']);
-
+    Route::resource('/productos',ProductoController::class);
     Route::post('/auth/register',[AuthController::class,'register']);
     Route::post('/auth/login',[AuthController::class,'login']);
 
@@ -27,7 +27,6 @@ Route::prefix('v1')->group(function(){
         Route::post('/auth/logout',[AuthController::class,'logout']);
         Route::get('/auth/me',[AuthController::class,'me']);
 
-        Route::resource('/productos',ProductoController::class);
     });
 });
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
